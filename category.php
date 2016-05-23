@@ -3,6 +3,7 @@
     if(!isset($_GET['category_id'])){
         header("Location:index.php");
     }
+    //Get category_id
     $cat_id = $_GET['category_id'];
     $stock_sql = "SELECT stock.stockID,stock.name,stock.price,stock.thumbnail,tbcategory.name AS CateName FROM stock JOIN tbcategory ON stock.categoryID = tbcategory.categoryID WHERE stock.categoryID =".$cat_id;
     if ($stock_query = mysqli_query($dbconn,$stock_sql)){
