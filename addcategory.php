@@ -9,6 +9,7 @@
     if(!isset($_SESSION['addcategory']['cat_name'])){
         $_SESSION['addcategory']['cat_name']="";
     }
+    //Testing branching
 ?>
 <h1>Add new category</h1>
 <form method="post" action="index.php?page=confirmcategory">
